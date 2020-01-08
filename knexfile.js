@@ -7,7 +7,7 @@ module.exports = {
   development: {
     client: 'sqlite3',
     //This was updated with DB for Heroku
-    connection: process.env.DB_URL,
+    connection: { filename: './database/auth.db3' },
     useNullAsDefault: true,
     migrations: {
       directory: './database/migrations',
