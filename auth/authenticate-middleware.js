@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 module.exports = (req, res, next) => {
 
   //When running in postman make sure and run in header and not body
-    const {username, password} = req.headers
+    const {username, password} = req.body
 
     if(!(username && password)){
         res.status(401).json({ message: 'you shall not pass!' });
