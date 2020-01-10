@@ -2,7 +2,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable("rests", tbl => {
         tbl.increments();
-        tbl.string("id", 128).notNullable().unique();
+        tbl.string("rest_id", 128).unique();
         tbl.string("rest_name", 128).notNullable().unique();
         tbl.string("img_url", 128).notNullable().unique();
         tbl.string("url", 128).notNullable().unique();
